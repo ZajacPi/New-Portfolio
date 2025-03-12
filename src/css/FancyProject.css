@@ -1,0 +1,92 @@
+.title {
+  position: relative;
+  font-size: 40px;
+  font-style: italic;
+  color:  white;
+  text-shadow: 2px 2px 3px rgb(159, 10, 159);
+  user-select: none;    
+}
+/* image overlay styling */
+.container {
+    position: relative;
+    width: 500px;
+    height: auto;
+    left: 25%;
+  }
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: #302233;
+    overflow: hidden;
+    width: 500px;
+    height: 0;
+    transition: .5s ease;
+    opacity: 90%;
+  }
+  
+.container:hover .project-overlay {
+    bottom: 0;
+    height: 100%;
+  }
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;   
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  /* button styling */
+.button {
+  border-radius: 4px;
+  background-color: #a644d7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

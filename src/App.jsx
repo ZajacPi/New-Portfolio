@@ -1,34 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import LogoButton from "./components/LogoButton";
+import GitHub_logo from "./assets/github-mark-white.svg";
+import LinkedIn_logo from "./assets/LinkedIn_icon.png"
+import LeetCode_logo from "./assets/LeetCode_Logo.png"
+import "./css/Home.css"
+
+import { ReactTyped } from "react-typed";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  <div className="home">
+            <h1 className="title"> Hi! My name is Piotrek, and I am studying engineering!</h1>
+            <h2>I am working on {" "}
+                <ReactTyped 
+                className="typed-text"
+                strings = {["React", "Javascript", "HTML", "CSS", "Matlab", "Python", "3D Printing", "CAD design", "STM32", "RaspberryPi", "Arduino", "ESP32", "C++", "Machine learning", "Robotics"]} 
+                typeSpeed={100}
+                backSpeed={40}
+                loop />
+            </h2>
+         
+            <h2> My profiles </h2>
+            <div className="button_container">
+                <LogoButton logo={GitHub_logo}   text="GitHub"   link="https://github.com/ZajacPi"/>
+                <LogoButton logo={LinkedIn_logo} text="LinkedIn" link="https://www.linkedin.com/in/piotr-zaj%C4%85c-6a3821269/"/>
+                <LogoButton logo={LeetCode_logo} text="LeetCode" link="https://leetcode.com/u/PiterZPiter/"/>
+            </div>
+        </div>
   )
 }
 
