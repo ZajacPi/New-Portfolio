@@ -1,4 +1,4 @@
-.logo_button {
+.retro_button {
     background-color: #eae6d8; 
     border: 2px solid #b0a898;
     width: 100px;
@@ -16,11 +16,11 @@
     border-radius: 10px; 
 }
 
-.logo_button:hover {
+.retro_button:hover {
     background-color: #d6d1c4; 
 }
 
-.logo_button:active {
+.retro_button:active {
     box-shadow: 0 2px #a49d89, 0 3px #6d6654;
     transform: translateY(3px); 
 }
