@@ -1,4 +1,4 @@
-import "../css/LogoBUtton.css"
+import "../css/LogoButton.css"
 export default function({logo, link, text}){
 
     return (
