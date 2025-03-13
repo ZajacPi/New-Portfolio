@@ -80,3 +80,12 @@ html, body {
         background-attachment: scroll; /* Naprawia problem */
     }
 } 
+
+
+/* mabye this will also help for mobile */
+@media (max-width: 500px) {
+    .button_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
