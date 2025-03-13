@@ -22,7 +22,10 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
+
+    margin: 0 auto; /*Ensures it is centered, will it help for mobile?*/
+
     min-height: 100vh;
     font-family: 'Courier New', Courier, monospace;
   }
@@ -49,6 +52,15 @@ html, body {
     gap: 20px; /* Odstęp między projektami */
 } 
 
+/* to sprawia, że fajnie wygląda na mobilnych no ale na kompie jest wszystko w jednej kolumnie... */
+/* .MyProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+} */
 
 /* Na mniejszych ekranach zmniejszam nagłówki */
 @media (max-width: 768px) {
