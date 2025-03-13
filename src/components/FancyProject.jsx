@@ -6,25 +6,24 @@ export default function Project({title, url, date, description}) {
       // alert("clicked")
     }
     return (
-      <div>
-        <h2 className="project-title">{title}</h2>
-        <div className="container">
+      <div className="project-wrapper">
+      <h2 className="fancy-project-title">{title}</h2>
+      <div className="container">
+        <img src={url} alt={title} width="500"/>
 
-          <img src={url} alt={title} width="500"/>
+        <div className="project-overlay">
 
-          <div className="project-overlay">
-
-            <div class="text">{description}
-            <button className="readme_button" onClick={readMore}>
-              <span>Read More</span>
-            </button>
-            
-            </div>
-
+          <div class="project-description">{description}
+          <button className="readme_button" onClick={readMore}>
+            <span>{'Read More ->'} </span>
+          </button>
+          
           </div>
+
         </div>
       </div>
-    );
+    </div>
+  );
   };
     
   

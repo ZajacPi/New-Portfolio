@@ -1,19 +1,20 @@
 import { useState } from 'react'
 import RetroButton from "./components/RetroButton";
 import FancyProject from "./components/FancyProject";
-import GitHub_logo from "./assets/github-mark-white.svg";
+import GitHub_logo from "./assets/github-mark.png";
 import LinkedIn_logo from "./assets/LinkedIn_icon.png"
 import LeetCode_logo from "./assets/LeetCode_Logo.png"
 import "./css/App.css"
 import TWT_Poster from "./assets/TWT_Poster.png";
+import Airflow from "./assets/Airflow.png";
 
 import { ReactTyped } from "react-typed";
 
 function App() {
     const [count, setCount] = useState(0)
     const projects = [
-        {id: 1, title:"TWT - The Walking Thread", url: TWT_Poster, date:"2024", description:"A fun project we made for the competition in Prague!"},
-        // {id: 2, title:"Micromouse", url:"Micromouse.png", date:"2023"}
+        {id: 1, title:"The Walking Thread", url: TWT_Poster, date:"2024", description:"A fun project we made for the competition in Prague!"},
+        {id: 2, title:"Air/Flow", url:Airflow, date:"2023", description:"A website for future engineers"}
 
     ]
   return (
@@ -36,7 +37,7 @@ function App() {
         </div>
 
         <div className="MyProjects">
-            <h1>Here are some of my favourite projects!</h1>
+            <h1 className="title">Here are some of my favourite projects!</h1>
             
             <div className="projects-grid">
                 {projects.map((project) => (

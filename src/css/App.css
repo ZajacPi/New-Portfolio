@@ -1,3 +1,16 @@
+body {
+    background-color: #b1ac96;
+    background-size: cover;
+    background-position: center;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Blokuje przewijanie w poziomie */
+    margin: 0;
+    padding: 0;
+}
+
 .title {
     user-select: none; 
     text-align: center;
@@ -28,6 +41,30 @@
     gap: 15px; 
     padding: 20px;
 }
-body {
-    background-color: #b1ac96;
-  }
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; /* Odstęp między projektami */
+} 
+
+
+/* Na mniejszych ekranach zmniejszam nagłówki */
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .typed-text {
+        font-size: 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Na telefonie 1 kolumna */
+    }
+    body {
+        background-attachment: scroll; /* Naprawia problem */
+    }
+} 
