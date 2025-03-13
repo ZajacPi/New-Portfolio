@@ -6,7 +6,7 @@ import LinkedIn_logo from "./assets/LinkedIn_icon.png"
 import LeetCode_logo from "./assets/LeetCode_Logo.png"
 import "./css/App.css"
 import TWT_Poster from "./assets/TWT_Poster.png";
-import Airflow from "./assets/Airflow.png";
+import Airflow from "./assets/airflow.png";
 
 import { ReactTyped } from "react-typed";
 
