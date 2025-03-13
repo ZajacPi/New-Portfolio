@@ -1,29 +1,43 @@
+import React, { useState } from 'react';
+
 import "../css/FancyProject.css"
 import RetroButton from "./RetroButton";
+import ProjectDescription from './ProjectDescription'
 
-export default function Project({title, url, date, description}) {
-    function readMore(){
-      // alert("clicked")
-    }
-    return (
-      <div className="project-wrapper">
-      <h2 className="fancy-project-title">{title}</h2>
-      <div className="container">
-        <img src={url} alt={title} width="500"/>
+export default function Project({title, url, date, description, article}) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-        <div className="project-overlay">
+  const readMore = () => {
+    setIsModalOpen(true);
+  };
 
-          <div class="project-description">{description}
-          <button className="readme_button" onClick={readMore}>
-            <span>{'Read More ->'} </span>
-          </button>
-          
-          </div>
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
+  return (
+    <div className="project-wrapper">
+    <h2 className="fancy-project-title">{title}</h2>
+    <div className="container">
+      <img src={url} alt={title} width="500"/>
+
+      <div className="project-overlay">
+
+        <div class="project-description">{description}
+        <button className="readme_button" onClick={readMore}>
+          <span>{'Read More ->'} </span>
+        </button>
+        
         </div>
+
       </div>
     </div>
-  );
-  };
+    <ProjectDescription isOpen={ isModalOpen } onClose={ closeModal }>
+      <h2>{title}</h2>
+      <p>{article}</p>
+    </ProjectDescription>
+  </div>
+);
+};
     
   
