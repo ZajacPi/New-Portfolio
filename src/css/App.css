@@ -49,7 +49,7 @@ html, body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px; /* Odstęp między projektami */
+    gap: 150px; /* Odstęp między projektami */
 } 
 
 /* to sprawia, że fajnie wygląda na mobilnych no ale na kompie jest wszystko w jednej kolumnie... */

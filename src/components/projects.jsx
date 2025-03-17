@@ -71,16 +71,7 @@ const projects = [
             <p><strong>Airflow</strong>is another project I am doing with my dear friend <a>Szymon Wysogląd</a></p>
         </div>
     },
-    {
-        id: 5,
-        title: "Air/Flow",
-        url: Airflow, 
-        date: "2023",
-        description: "A website for future engineers",
-        article: <div>
-            <p><strong>Airflow</strong>is another project I am doing with my dear friend <a>Szymon Wysogląd</a></p>
-        </div>
-    },
+
 
 ];
 
