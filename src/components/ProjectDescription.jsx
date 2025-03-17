@@ -8,8 +8,8 @@ export default function Modal({ isOpen, onClose, children }){
     <div className="ProjectDescription-overlay">
       <div className="ProjectDescription-content">
         {children}
-      </div>
     <button className="ProjectDescription-close-button" onClick={onClose}> Cool, go back! </button>
+      </div>
     </div>
   );
 };
